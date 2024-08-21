@@ -15,7 +15,7 @@ function Navbar() {
 	};
 
 	const handleLogoClick = () => {
-		setActiveLink("/"); // Met à jour le lien actif sur la page d'accueil
+		setActiveLink("/"); 
 	};
 
 	const handleLoginClick = () => {
