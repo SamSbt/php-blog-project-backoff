@@ -23,10 +23,6 @@ function Navbar() {
 		navigate("/login");
 	};
 
-	const handleRegisterClick = () => {
-    setActiveLink(null);
-		navigate("/register");
-	};
 
 	return (
 		<>
@@ -84,17 +80,10 @@ function Navbar() {
 						<div>
 							<button
 								type="button"
-								class="btn btn-primary me-3"
+								className="btn btn-primary me-3"
 								onClick={handleLoginClick}
 							>
 								Login
-							</button>
-							<button
-								type="button"
-								class="btn btn-primary"
-								onClick={handleRegisterClick}
-							>
-								Register
 							</button>
 						</div>
 					</div>
