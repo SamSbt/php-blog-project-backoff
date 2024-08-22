@@ -1,4 +1,20 @@
+import { useState } from "react";
+
 function RegisterScreen() {
+	const [lastname, setLastname] = useState("");
+	const [firstname, setFirstname] = useState("");
+	const [email, setEmail] = useState("");
+	const [password, setPassword] = useState("");
+
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		// code ici
+		console.log("Nom:", lastname);
+		console.log("Prénom:", firstname);
+		console.log("Email:", email);
+		console.log("Password:", password);
+	};
+
 	return (
 		<>
 			<section className="d-flex justify-content-center align-items-center wrapper pb-5">
@@ -19,10 +35,11 @@ function RegisterScreen() {
 								id="inputNom"
 								name="inputNom"
 								placeholder="Entrez votre nom"
+								onChange={(e) => setLastname(e.target.value)}
 								required
 							/>
 						</div>
-						<div className=" mb-3">
+						<div className="mb-3">
 							<label htmlFor="inputPrenom" className="form-label">
 								Prénom :
 							</label>
@@ -32,23 +49,11 @@ function RegisterScreen() {
 								id="inputPrenom"
 								name="inputPrenom"
 								placeholder="Entrez votre prénom"
+								onChange={(e) => setFirstname(e.target.value)}
 								required
 							/>
 						</div>
-						<div className=" mb-3">
-							<label htmlFor="inputPseudo" className="form-label">
-								Pseudo :
-							</label>
-							<input
-								type="text"
-								className="form-control"
-								id="inputPseudo"
-								name="inputPseudo"
-								placeholder="Entrez votre pseudo"
-								required
-							/>
-						</div>
-						<div className=" mb-3">
+						<div className="mb-3">
 							<label htmlFor="inputEmail" className="form-label">
 								Adresse Email :
 							</label>
@@ -58,10 +63,11 @@ function RegisterScreen() {
 								id="inputEmail"
 								name="inputEmail"
 								placeholder="Entrez votre email"
+								onChange={(e) => setEmail(e.target.value)}
 								required
 							/>
 						</div>
-						<div className=" mb-3">
+						<div className="mb-3">
 							<label htmlFor="inputPassword" className="form-label">
 								Mot de passe :
 							</label>
@@ -71,6 +77,7 @@ function RegisterScreen() {
 								id="inputPassword"
 								name="inputPassword"
 								placeholder="Entrez votre mot de passe"
+								onChange={(e) => setPassword(e.target.value)}
 								required
 							/>
 						</div>
